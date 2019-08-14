@@ -487,7 +487,7 @@ abstract class ExtentObservable
         			.max(Date::compareTo)
         			.get();
         	reportStartDate = reportStartDate.getTime() > minDate.getTime() ? minDate : reportStartDate;
-        	reportEndDate = reportEndDate.getTime() < maxDate.getTime() ? maxDate : reportEndDate;
+        	reportEndDate = maxDate; //reportEndDate.getTime() < maxDate.getTime() ? maxDate : reportEndDate;
         }
     }
     
